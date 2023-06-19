@@ -19,3 +19,29 @@
   color: #000;
   background-color: #c9c9c9;
 }
+.small-icon-button {
+  min-width: 32px !important;
+  width: 32px !important;
+  height: 22px !important;
+  padding: 0 !important;
+  padding-left: 6px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  & > *[role=img] {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  } 
+
+  .mat-mdc-button-touch-target {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
