@@ -6,7 +6,7 @@ import { MtxPopoverModule } from '@ng-matero/extensions/popover';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
     MtxPopoverModule,
     FormsModule,
     CommonModule
