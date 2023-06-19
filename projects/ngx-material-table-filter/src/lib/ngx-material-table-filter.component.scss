@@ -1,0 +1,21 @@
+.filter-container {
+  padding: 10px;
+}
+.filter-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.small-icon-button {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  padding: 0;
+}
+.header-container {
+  display: flex;
+  gap: 2px;
+}
+.filter-active {
+  color: #000;
+  background-color: #c9c9c9;
+}

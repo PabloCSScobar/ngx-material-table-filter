@@ -1,0 +1,47 @@
+<div class="header-container">
+  <ng-content></ng-content>
+  <button
+  mat-button
+  size="small"
+  class="small-icon-button"
+  type="button"
+  #popoverTrigger="mtxPopoverTrigger"
+  [mtxPopoverTriggerFor]="popover"
+  mtxPopoverTriggerOn="click"
+  [ngClass]="{ 'filter-active': isFilterActiveForColumn() }"
+  >
+    <mat-icon>keyboard_arrow_down</mat-icon>
+</button>
+<button
+  mat-button
+  size="small"
+  class="small-icon-button"
+  type="button"
+  (click)="clearColumn(popover)"
+  *ngIf="isFilterActiveForColumn()"
+>
+  <mat-icon>clear</mat-icon>
+</button>
+<mtx-popover #popover="mtxPopover"
+    [position]="['below', 'after']"
+    [closeOnPanelClick]="false"
+    [closeOnBackdropClick]="true"
+    mtxPopoverTriggerOn="click"
+    [hasBackdrop]="true"
+    [elevation]="8">
+    <div class="filter-container">
+    <form (ngSubmit)="changeFilter(popover)">
+      <div>
+        <mat-form-field  appearance='outline'>
+          <input matInput placeholder="Value" [(ngModel)]="columnFilter" [ngModelOptions]="{standalone: true}"> 
+        </mat-form-field>
+      </div>
+
+      <div class="filter-actions">
+        <button mat-raised-button type="button" (click)="clearColumn(popover)">Clear</button>
+        <button mat-raised-button color="primary" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+</mtx-popover>
+</div>

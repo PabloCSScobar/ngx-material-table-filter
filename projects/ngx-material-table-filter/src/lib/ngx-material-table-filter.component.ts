@@ -2,14 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'mtf-ngx-material-table-filter',
-  template: `
-    <p>
-      ngx-material-table-filter works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './ngx-material-table-filter.component.html',
+  styleUrls: ['./ngx-material-table-filter.component.scss']
 })
 export class NgxMaterialTableFilterComponent {
-
 }
