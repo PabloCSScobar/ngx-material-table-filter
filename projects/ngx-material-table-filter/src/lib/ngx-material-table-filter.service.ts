@@ -9,7 +9,9 @@ type TableFilter = {
   [key: string]: ColumnFilter;
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class NgxMaterialTableFilterService {  
   setFilterPredicate() {
     return (data: any, filter: string) => {
