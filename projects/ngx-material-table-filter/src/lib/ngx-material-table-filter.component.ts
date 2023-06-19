@@ -4,7 +4,7 @@ import { NgxMaterialTableFilterService } from './ngx-material-table-filter.servi
 import { MtxPopover } from '@ng-matero/extensions/popover';
 
 @Component({
-  selector: 'mtf-ngx-material-table-filter',
+  selector: 'th[mtf-table-filter]',
   templateUrl: './ngx-material-table-filter.component.html',
   styleUrls: ['./ngx-material-table-filter.component.scss']
 })
